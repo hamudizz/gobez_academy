@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:child_email",
+ "creation": "2025-08-02 23:39:23.642300",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "child_name",
+  "child_email",
+  "grade",
+  "subscription",
+  "price",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "child_name",
+   "fieldtype": "Data",
+   "label": "Child Name"
+  },
+  {
+   "fieldname": "child_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Child Email",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Select",
+   "label": "Grade",
+   "options": "1\n2\n3\n4\n5\n6\n6 National Exams"
+  },
+  {
+   "fieldname": "subscription",
+   "fieldtype": "Data",
+   "label": "Subscription"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Data",
+   "label": "Price"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Paid\nPending\nDraft\nExpired\nRenewed"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-02 23:43:59.953565",
+ "modified_by": "Administrator",
+ "module": "Gobez Academy LMS",
+ "name": "Child Register",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
