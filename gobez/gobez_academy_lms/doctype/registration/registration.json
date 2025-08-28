@@ -6,12 +6,12 @@
  "engine": "InnoDB",
  "field_order": [
   "checkout_url",
-  "reg_id",
   "mail",
-  "parent_name",
+  "student",
   "total",
   "phone",
   "tx_ref",
+  "batch",
   "start",
   "end"
  ],
@@ -22,20 +22,9 @@
    "label": "Checkout Url"
   },
   {
-   "fieldname": "reg_id",
-   "fieldtype": "Link",
-   "label": "Reg Id",
-   "options": "Parent Subscription"
-  },
-  {
    "fieldname": "mail",
    "fieldtype": "Data",
-   "label": "Mail"
-  },
-  {
-   "fieldname": "parent_name",
-   "fieldtype": "Data",
-   "label": "Parent Name"
+   "label": "Parent"
   },
   {
    "fieldname": "total",
@@ -61,12 +50,24 @@
    "fieldname": "end",
    "fieldtype": "Data",
    "label": "End"
+  },
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "LMS Batch"
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "User"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-02 23:58:07.129107",
+ "modified": "2025-08-25 07:51:57.364833",
  "modified_by": "Administrator",
  "module": "Gobez Academy LMS",
  "name": "Registration",

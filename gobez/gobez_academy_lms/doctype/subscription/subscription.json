@@ -1,34 +1,60 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{month}-{price}",
+ "autoname": "prompt",
  "creation": "2025-08-02 23:45:32.610314",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "type",
   "month",
-  "price"
+  "packages",
+  "price",
+  "duration"
  ],
  "fields": [
   {
+   "depends_on": "eval:doc.type===\"Lesson Package\"",
    "fieldname": "month",
-   "fieldtype": "Data",
-   "label": "Month"
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Month",
+   "options": "\n1 Month\n3 Months\n6 Months\n1 Year\n1 Year Premium"
   },
   {
    "fieldname": "price",
    "fieldtype": "Currency",
-   "label": "Price"
+   "in_list_view": 1,
+   "label": "Price",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Lesson Package\nExam Package"
+  },
+  {
+   "depends_on": "eval:doc.type===\"Exam Package\"",
+   "fieldname": "packages",
+   "fieldtype": "Select",
+   "label": "Packages",
+   "options": "Grade Exam\nNational Exam"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-02 23:47:22.307759",
+ "modified": "2025-08-28 22:06:23.729187",
  "modified_by": "Administrator",
  "module": "Gobez Academy LMS",
  "name": "Subscription",
- "naming_rule": "Expression",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {

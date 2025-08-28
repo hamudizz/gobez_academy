@@ -5,6 +5,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "i_am",
   "parent_email",
   "parent_name",
   "parent_username",
@@ -16,16 +17,19 @@
   "student_password",
   "telegram_user_id",
   "grade",
-  "subscription"
+  "subscription",
+  "total"
  ],
  "fields": [
   {
    "fieldname": "student_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Student Name"
+   "label": "Student Name",
+   "reqd": 1
   },
   {
+   "depends_on": "eval:doc.i_am===\"Student\"",
    "fieldname": "student_email",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -41,58 +45,81 @@
    "fieldname": "grade",
    "fieldtype": "Link",
    "label": "Grade",
-   "options": "LMS Batch"
+   "options": "LMS Batch",
+   "reqd": 1
   },
   {
    "fieldname": "subscription",
    "fieldtype": "Data",
-   "label": "Subscription"
+   "label": "Subscription",
+   "reqd": 1
   },
   {
+   "depends_on": "eval:doc.i_am===\"Parent\"",
    "fieldname": "parent_email",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Parent Email ",
-   "reqd": 1,
-   "unique": 1
+   "mandatory_depends_on": "eval:doc.i_am===\"Parent\""
   },
   {
+   "depends_on": "eval:doc.i_am===\"Parent\"",
    "fieldname": "parent_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Parent Name ",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.i_am===\"Parent\""
   },
   {
+   "depends_on": "eval:doc.i_am===\"Parent\"",
    "fieldname": "parent_username",
    "fieldtype": "Data",
-   "label": "Parent Username"
+   "label": "Parent Username",
+   "mandatory_depends_on": "eval:doc.i_am===\"Parent\""
   },
   {
+   "depends_on": "eval:doc.i_am===\"Parent\"",
    "fieldname": "parent_password",
    "fieldtype": "Data",
-   "label": "Parent Password"
+   "label": "Parent Password",
+   "mandatory_depends_on": "eval:doc.i_am===\"Parent\""
   },
   {
+   "depends_on": "eval:doc.i_am===\"Parent\"",
    "fieldname": "parent_phone",
    "fieldtype": "Phone",
-   "label": "Parent Phone"
+   "label": "Parent Phone",
+   "mandatory_depends_on": "eval:doc.i_am===\"Parent\""
   },
   {
    "fieldname": "student_username",
    "fieldtype": "Data",
-   "label": "Student Username"
+   "label": "Student Username",
+   "reqd": 1
   },
   {
    "fieldname": "student_password",
    "fieldtype": "Data",
-   "label": "Student Password"
+   "label": "Student Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "i_am",
+   "fieldtype": "Select",
+   "label": "I am",
+   "options": "\nParent\nStudent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Data",
+   "label": "Total"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-24 04:00:08.501101",
+ "modified": "2025-08-25 06:25:36.738005",
  "modified_by": "Administrator",
  "module": "Gobez Academy LMS",
  "name": "Student Registration",
