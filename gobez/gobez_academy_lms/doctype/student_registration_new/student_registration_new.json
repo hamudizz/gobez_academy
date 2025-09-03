@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-02 23:23:51.441712",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "i_am",
+  "parent_email",
+  "parent_name",
+  "parent_username",
+  "parent_password",
+  "parent_phone",
+  "student_name",
+  "student_email",
+  "student_username",
+  "student_password",
+  "telegram_user_id",
+  "grade",
+  "subscription",
+  "total"
+ ],
+ "fields": [
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.i_am===\"Student\"",
+   "fieldname": "student_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Email",
+   "unique": 1
+  },
+  {
+   "fieldname": "telegram_user_id",
+   "fieldtype": "Data",
+   "label": "Telegram User Id"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "LMS Batch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subscription",
+   "fieldtype": "Data",
+   "label": "Subscription",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.i_am===\"Parent\"",
+   "fieldname": "parent_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Parent Email ",
+   "mandatory_depends_on": "eval:doc.i_am===\"Parent\""
+  },
+  {
+   "depends_on": "eval:doc.i_am===\"Parent\"",
+   "fieldname": "parent_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Parent Name ",
+   "mandatory_depends_on": "eval:doc.i_am===\"Parent\""
+  },
+  {
+   "depends_on": "eval:doc.i_am===\"Parent\"",
+   "fieldname": "parent_username",
+   "fieldtype": "Data",
+   "label": "Parent Username",
+   "mandatory_depends_on": "eval:doc.i_am===\"Parent\""
+  },
+  {
+   "depends_on": "eval:doc.i_am===\"Parent\"",
+   "fieldname": "parent_password",
+   "fieldtype": "Data",
+   "label": "Parent Password",
+   "mandatory_depends_on": "eval:doc.i_am===\"Parent\""
+  },
+  {
+   "depends_on": "eval:doc.i_am===\"Parent\"",
+   "fieldname": "parent_phone",
+   "fieldtype": "Phone",
+   "label": "Parent Phone",
+   "mandatory_depends_on": "eval:doc.i_am===\"Parent\""
+  },
+  {
+   "fieldname": "student_username",
+   "fieldtype": "Data",
+   "label": "Student Username",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_password",
+   "fieldtype": "Data",
+   "label": "Student Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "i_am",
+   "fieldtype": "Select",
+   "label": "I am",
+   "options": "\nParent\nStudent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Data",
+   "label": "Total"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-25 06:25:36.738005",
+ "modified_by": "Administrator",
+ "module": "Gobez Academy LMS",
+ "name": "Student Registration new",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
