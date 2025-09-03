@@ -6,14 +6,15 @@
  "engine": "InnoDB",
  "field_order": [
   "checkout_url",
-  "reg_id",
   "mail",
-  "parent_name",
+  "student",
   "total",
   "phone",
   "tx_ref",
+  "batch",
   "start",
-  "end"
+  "end",
+  "subscription"
  ],
  "fields": [
   {
@@ -22,20 +23,9 @@
    "label": "Checkout Url"
   },
   {
-   "fieldname": "reg_id",
-   "fieldtype": "Link",
-   "label": "Reg Id",
-   "options": "Parent Subscription"
-  },
-  {
    "fieldname": "mail",
    "fieldtype": "Data",
-   "label": "Mail"
-  },
-  {
-   "fieldname": "parent_name",
-   "fieldtype": "Data",
-   "label": "Parent Name"
+   "label": "Parent"
   },
   {
    "fieldname": "total",
@@ -61,12 +51,31 @@
    "fieldname": "end",
    "fieldtype": "Data",
    "label": "End"
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "User"
+  },
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "LMS Batch"
+  },
+  {
+   "default": "Incomplete",
+   "fieldname": "subscription",
+   "fieldtype": "Select",
+   "label": "Subscription",
+   "options": "Incomplete\nActive\nExpired\nRenewed\nIncomplete"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-02 23:58:07.129107",
+ "modified": "2025-09-04 00:44:29.502428",
  "modified_by": "Administrator",
  "module": "Gobez Academy LMS",
  "name": "Registration",
