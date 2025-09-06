@@ -1,40 +1,25 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-08-25 07:19:44.563765",
+ "creation": "2025-09-05 22:04:58.132172",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "student",
-  "parent1",
-  "table_dfor"
+  "section_break_pz7z"
  ],
  "fields": [
   {
-   "fieldname": "student",
-   "fieldtype": "Link",
-   "label": "Student",
-   "options": "User"
-  },
-  {
-   "fieldname": "parent1",
-   "fieldtype": "Link",
-   "label": "Parent",
-   "options": "User"
-  },
-  {
-   "fieldname": "table_dfor",
-   "fieldtype": "Table",
-   "options": "Enrollment Link"
+   "fieldname": "section_break_pz7z",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-25 07:21:59.717924",
+ "modified": "2025-09-05 22:04:58.132172",
  "modified_by": "Administrator",
  "module": "Gobez Academy LMS",
- "name": "Student Enrolled",
+ "name": "Gobez Registration",
  "owner": "Administrator",
  "permissions": [
   {
