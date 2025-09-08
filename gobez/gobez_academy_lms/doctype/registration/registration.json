@@ -61,7 +61,6 @@
    "options": "LMS Batch"
   },
   {
-   "fetch_from": "tx_ref.student_name",
    "fieldname": "student",
    "fieldtype": "Link",
    "label": "Student",
@@ -112,7 +111,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-06 03:05:13.265934",
+ "modified": "2025-09-07 04:59:26.179977",
  "modified_by": "Administrator",
  "module": "Gobez Academy LMS",
  "name": "Registration",

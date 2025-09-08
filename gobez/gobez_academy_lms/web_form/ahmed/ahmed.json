@@ -11,7 +11,7 @@
  "amount_field": "total",
  "anonymous": 0,
  "apply_document_permissions": 0,
- "button_label": "Save",
+ "button_label": "register",
  "condition_json": "[]",
  "creation": "2025-09-04 23:28:13.013845",
  "currency": "ETB",
@@ -25,7 +25,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2025-09-06 00:56:16.492577",
+ "modified": "2025-09-07 01:17:54.980663",
  "modified_by": "Administrator",
  "module": "Gobez Academy LMS",
  "name": "ahmed",
@@ -39,7 +39,7 @@
  "show_sidebar": 1,
  "success_message": "Almost done! Please pay to complete registration and start using Gobez Academy Online Learning.",
  "success_title": "Redirecting to Payment",
- "success_url": "/checkout",
+ "success_url": "/login?redirect-to=%2Fchapa%2Fcheckout",
  "title": "Register",
  "web_form_fields": [
   {
@@ -54,6 +54,19 @@
    "precision": "",
    "read_only": 0,
    "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "parent_details_section",
+   "fieldtype": "Section Break",
+   "hidden": 0,
+   "label": "Parent Details",
+   "max_length": 0,
+   "max_value": 0,
+   "precision": "",
+   "read_only": 0,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {
@@ -136,6 +149,7 @@
    "fieldname": "section_break_picr",
    "fieldtype": "Section Break",
    "hidden": 0,
+   "label": "Student Details",
    "max_length": 0,
    "max_value": 0,
    "precision": "",

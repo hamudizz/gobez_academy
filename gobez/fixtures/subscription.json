@@ -1,0 +1,35 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Subscription",
+  "duration": 15552000.0,
+  "modified": "2025-09-05 22:12:03.987422",
+  "month": "",
+  "name": "Semester Exams",
+  "packages": "Grade Exam",
+  "price": 200.0,
+  "type": "Exam Package"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Subscription",
+  "duration": 2592000.0,
+  "modified": "2025-09-05 22:08:57.096447",
+  "month": "1 Month",
+  "name": "Monthly",
+  "packages": "Grade Exam",
+  "price": 300.0,
+  "type": "Lesson Package"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Subscription",
+  "duration": 7776000.0,
+  "modified": "2025-09-05 22:10:14.061379",
+  "month": "3 Months",
+  "name": "3 Months",
+  "packages": "Grade Exam",
+  "price": 810.0,
+  "type": "Lesson Package"
+ }
+]
