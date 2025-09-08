@@ -7,13 +7,19 @@
  "field_order": [
   "checkout_url",
   "mail",
+  "parent_phone",
+  "parent_name",
   "student",
+  "student_name",
   "total",
-  "phone",
   "tx_ref",
   "batch",
+  "grade",
   "start",
-  "end"
+  "end",
+  "payment",
+  "subscription",
+  "batch_description"
  ],
  "fields": [
   {
@@ -23,8 +29,9 @@
   },
   {
    "fieldname": "mail",
-   "fieldtype": "Data",
-   "label": "Parent"
+   "fieldtype": "Link",
+   "label": "Parent",
+   "options": "User"
   },
   {
    "fieldname": "total",
@@ -32,23 +39,19 @@
    "label": "Total"
   },
   {
-   "fieldname": "phone",
-   "fieldtype": "Data",
-   "label": "Phone"
-  },
-  {
    "fieldname": "tx_ref",
-   "fieldtype": "Data",
-   "label": "Tx Ref"
+   "fieldtype": "Link",
+   "label": "Tx Ref",
+   "options": "Student Registration"
   },
   {
    "fieldname": "start",
-   "fieldtype": "Data",
+   "fieldtype": "Datetime",
    "label": "Start"
   },
   {
    "fieldname": "end",
-   "fieldtype": "Data",
+   "fieldtype": "Datetime",
    "label": "End"
   },
   {
@@ -62,12 +65,53 @@
    "fieldtype": "Link",
    "label": "Student",
    "options": "User"
+  },
+  {
+   "fieldname": "payment",
+   "fieldtype": "Select",
+   "label": "Payment",
+   "options": "\nNot Started\nPending\nVerified\nTo Renew"
+  },
+  {
+   "fetch_from": "batch.title",
+   "fieldname": "grade",
+   "fieldtype": "Data",
+   "label": "Grade"
+  },
+  {
+   "fetch_from": "mail.phone",
+   "fieldname": "parent_phone",
+   "fieldtype": "Data",
+   "label": "Parent Phone"
+  },
+  {
+   "fetch_from": "mail.first_name",
+   "fieldname": "parent_name",
+   "fieldtype": "Data",
+   "label": "Parent Name"
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name"
+  },
+  {
+   "fetch_from": "tx_ref.subscription",
+   "fieldname": "subscription",
+   "fieldtype": "Data",
+   "label": "Subscription"
+  },
+  {
+   "fetch_from": "batch.description",
+   "fieldname": "batch_description",
+   "fieldtype": "Small Text",
+   "label": "Batch Description"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-25 07:51:57.364833",
+ "modified": "2025-09-07 04:59:26.179977",
  "modified_by": "Administrator",
  "module": "Gobez Academy LMS",
  "name": "Registration",

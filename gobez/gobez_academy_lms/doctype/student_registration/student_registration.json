@@ -6,19 +6,21 @@
  "engine": "InnoDB",
  "field_order": [
   "i_am",
+  "parent_details_section",
   "parent_email",
   "parent_name",
   "parent_username",
   "parent_password",
   "parent_phone",
+  "section_break_picr",
   "student_name",
   "student_email",
   "student_username",
   "student_password",
-  "telegram_user_id",
-  "grade",
   "subscription",
-  "total"
+  "grade",
+  "total",
+  "state"
  ],
  "fields": [
   {
@@ -37,11 +39,6 @@
    "unique": 1
   },
   {
-   "fieldname": "telegram_user_id",
-   "fieldtype": "Data",
-   "label": "Telegram User Id"
-  },
-  {
    "fieldname": "grade",
    "fieldtype": "Link",
    "label": "Grade",
@@ -50,8 +47,9 @@
   },
   {
    "fieldname": "subscription",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Subscription",
+   "options": "Subscription",
    "reqd": 1
   },
   {
@@ -80,14 +78,14 @@
   {
    "depends_on": "eval:doc.i_am===\"Parent\"",
    "fieldname": "parent_password",
-   "fieldtype": "Data",
+   "fieldtype": "Password",
    "label": "Parent Password",
    "mandatory_depends_on": "eval:doc.i_am===\"Parent\""
   },
   {
    "depends_on": "eval:doc.i_am===\"Parent\"",
    "fieldname": "parent_phone",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "label": "Parent Phone",
    "mandatory_depends_on": "eval:doc.i_am===\"Parent\""
   },
@@ -99,7 +97,7 @@
   },
   {
    "fieldname": "student_password",
-   "fieldtype": "Data",
+   "fieldtype": "Password",
    "label": "Student Password",
    "reqd": 1
   },
@@ -111,15 +109,32 @@
    "reqd": 1
   },
   {
+   "fetch_from": "subscription.price",
    "fieldname": "total",
-   "fieldtype": "Data",
+   "fieldtype": "Currency",
    "label": "Total"
+  },
+  {
+   "fieldname": "section_break_picr",
+   "fieldtype": "Section Break",
+   "label": "Student Details"
+  },
+  {
+   "fieldname": "parent_details_section",
+   "fieldtype": "Section Break",
+   "label": "Parent Details"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "label": "State",
+   "options": "Draft\nPending\nPaid\nExpired\nRenewed"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-25 06:25:36.738005",
+ "modified": "2025-09-08 19:49:01.503779",
  "modified_by": "Administrator",
  "module": "Gobez Academy LMS",
  "name": "Student Registration",
